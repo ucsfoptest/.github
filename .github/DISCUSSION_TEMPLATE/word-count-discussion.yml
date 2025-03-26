@@ -1,5 +1,5 @@
 name: Word Count Discussion
-description: Discussion template with word count guidelines
+#description: Discussion template with word count guidelines
 labels: [discussion]
 
 body:
