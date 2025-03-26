@@ -1,45 +1,56 @@
-name: Discussion Submission
-description: Template for discussion submissions with word count guidelines
-labels: [discussion]
-
+title: "[Ideas] "
+labels: ["General Introduction"]
 body:
   - type: markdown
     attributes:
       value: |
-        ## Discussion Submission Guidelines
-
-        Please carefully review the word count requirements before submitting.
-
+        This is text that will show up in the template!
   - type: textarea
-    id: discussion-content
+    id: improvements
     attributes:
-      label: Your Discussion
-      description: Share your thoughts, ensuring you meet the word count requirements.
-      placeholder: Write your discussion here...
-      validate:
-        required: true
-        min-words: 50
-        max-words: 500
+      label: Top 3 improvements
+      description: "What are the top 3 improvements we could make to this project?"
+      value: |
+        1.
+        2.
+        3.
+        ...
+      render: bash
     validations:
       required: true
-
-  - type: textarea
-    id: word-count-check
+  - type: markdown
     attributes:
-      label: Word Count Verification
-      description: |
-        👉 Manually count your words before submission:
-        - Minimum required: 50 words
-        - Maximum allowed: 500 words
-        - Current word count: 
-      placeholder: Type or paste your content here to manually verify word count
-      render: text
-
-  - type: checkboxes
-    id: guidelines
+      value: |
+        ## Markdown header
+        And some more markdown
+  - type: input
+    id: has-id
     attributes:
-      label: Submission Guidelines
-      description: Please confirm you've met the word count requirements
+      label: Suggestions
+      description: A description about suggestions to help you
+    validations:
+      required: true
+  - type: dropdown
+    id: download
+    attributes:
+      label: Which area of this project could be most improved?
       options:
-        - label: I have verified that my discussion is between 50-500 words
+        - Documentation
+        - Pull request review time
+        - Bug fix time
+        - Release cadence
+    validations:
+      required: true
+  - type: checkboxes
+    attributes:
+      label: Check that box!
+      options:
+        - label: This one!
           required: true
+        - label: I won't stop you if you check this one, too
+  - type: markdown
+    attributes:
+      value: |
+        ### The thrilling conclusion
+        _to our template_
+
