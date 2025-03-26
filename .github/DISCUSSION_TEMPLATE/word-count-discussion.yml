@@ -1,0 +1,29 @@
+name: Word Count Discussion
+description: Discussion template with word count guidelines
+labels: [discussion]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Word Count Discussion Template
+
+        Please follow the guidelines below.
+
+  - type: textarea
+    id: discussion-content
+    attributes:
+      label: Your Discussion
+      description: Share your thoughts
+      placeholder: Write your discussion here...
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: guidelines
+    attributes:
+      label: Submission Guidelines
+      description: Please confirm you understand the guidelines
+      options:
+        - label: I have reviewed the discussion guidelines
+          required: true
