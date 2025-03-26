@@ -16,12 +16,10 @@ body:
       label: Your Discussion
       description: Share your thoughts, ensuring you meet the word count requirements.
       placeholder: Write your discussion here...
-      validate:
+    validations:
         required: true
         min-words: 50
         max-words: 500
-    validations:
-      required: true
 
   - type: textarea
     id: word-count-check
