@@ -1,29 +1,45 @@
-#name: Word Count Discussion
-#description: Discussion template with word count guidelines
+#name: Discussion Submission
+#description: Template for discussion submissions with word count guidelines
 labels: [discussion]
 
 body:
   - type: markdown
     attributes:
       value: |
-        ## Word Count Discussion Template
+        ## Discussion Submission Guidelines
 
-        Please follow the guidelines below.
+        Please carefully review the word count requirements before submitting.
 
   - type: textarea
     id: discussion-content
     attributes:
       label: Your Discussion
-      description: Share your thoughts
+      description: Share your thoughts, ensuring you meet the word count requirements.
       placeholder: Write your discussion here...
+      validate:
+        required: true
+        min-words: 50
+        max-words: 500
     validations:
       required: true
+
+  - type: textarea
+    id: word-count-check
+    attributes:
+      label: Word Count Verification
+      description: |
+        👉 Manually count your words before submission:
+        - Minimum required: 50 words
+        - Maximum allowed: 500 words
+        - Current word count: 
+      placeholder: Type or paste your content here to manually verify word count
+      render: text
 
   - type: checkboxes
     id: guidelines
     attributes:
       label: Submission Guidelines
-      description: Please confirm you understand the guidelines
+      description: Please confirm you've met the word count requirements
       options:
-        - label: I have reviewed the discussion guidelines
+        - label: I have verified that my discussion is between 50-500 words
           required: true
